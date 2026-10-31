@@ -12,6 +12,11 @@ reviewers see one layer at a time.
 > You'll build a two-layer stack for Mona's café menu: espresso first, then
 > latte on top. Each layer becomes its own pull request.
 
+> **Companion app**
+>
+> Try the [café menu app](app/README.md) to manage the sample drinks with a
+> React interface backed by a FastAPI API.
+
 ## Before you start (skip if you already signed in on Section 1)
 
 To copy a command, hover over its code block and click the copy button at the
