@@ -38,6 +38,15 @@ gh repo edit --enable-issues
 After signing in, follow the steps below by copying and pasting the commands
 below into your terminal.
 
+This tutorial requires a version of GitHub CLI that includes `gh stack`. Check
+that the command is available before continuing:
+
+```bash
+gh stack --help
+```
+
+If GitHub CLI reports that `stack` is unknown, update GitHub CLI and try again.
+
 ## 1. Go to this folder
 
 ```bash
@@ -74,10 +83,11 @@ git commit -am "Add latte to the menu"
 GH_REPO="$(git remote get-url origin)" gh stack submit --auto --open --remote origin
 ```
 
+`--auto` skips the interactive editor and generates pull request titles;
+`--open` creates them ready for review instead of as drafts.
 `GH_REPO` selects the repository for the pull requests; `--remote origin`
-selects where the branches are pushed. Both must point to your fork. `--open`
-creates the pull requests ready for review instead of as drafts, so the stack
-can be merged.
+selects where the branches are pushed. Both must point to your fork. Draft
+pull requests block the stack merge workflow.
 
 ## 5. Open the top of the stack
 
